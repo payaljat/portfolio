@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width, initial-scale=1.0">
+    <title>simple portfoliyo</title>
+    <link rel="stlesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+} 
+.header{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 35px 12%;
+     background: rgba(0, 0, 0, 0.8);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+     
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}   
+.logo:hover{
+      color: orangered;
+      text-shadow: 0 0 25px orangered,
+                   0 0 50px orangered;
+      transform: scale(1,1);
+}
+span{
+    color: orangered;
+}  
+.navbar a{
+     font-size: 18px;
+     color: white;
+     font-weight: 500;
+     margin: 0 20px;
+     border-bottom: 3px solid transparent;
+     transition: 0.3s ease;
+}  
+.navbar a:hover,
+.navbar a.active{
+     color: orangered;
+     border-bottom: 3px solid orangered;
+}
+.contact_btn{
+    padding: 10px 30px;
+    color: black;
+    margin-left: 8rem;
+    background-color: white;
+    border-radius: 30px;
+    font-size: large;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.contact-btn:hover{
+    background: transparent;
+    color: white;
+    border: 2px solid orangered ;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: (241,241,241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{ 
+    font-size: 42px;
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display:flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+.img-box img{
+    border-radius: 50%;
+    width: 350px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.60);
+    width: 50px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: black;
+}
+.about-img img{
+    position: relative;
+    width: 350px;
+    box-shadow: 0 0 35px orangered,
+                0 0 50px orangered;
+    border-radius: 50%;
+}
+.about-content h2{
+    text-align: left;
+    color: white;            
+    font-size: 32px;
+}
+.about-content h3{
+    font-size: 62px;
+    color: white;
+}
+.about-content p{
+    color: white;
+    font-size: 20px;
+    margin: 2em;
+}
+.form h1{
+    margin: 150px 0px 40px 0px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-top: 80px;
+    
+}
+.form h1 span{
+    color: orangered;
+    
+}
+.form input,textarea{
+    width: 550px;
+    margin: 10px 340px;
+    padding: 15px;
+    font-size: 18px;
+    color: black;
+}
+.form .form_btn{
+    padding: 15px 50px;
+    font-size: 20px;
+    background-color: orangered;
+    margin: 1.5rem 33rem;
+    box-shadow: 0px 0px 33rem;
+    cursor: pointer;
+    border: none;
+    transition: .3s ease;
+}
+.from .form_btn:hover{
+    background: transparent;
+    border: 2px solid orangered;
+    color: white;
+
+} 
+.footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding: 40px 0;
+        background-color: black;
+}
+.footer .social a:hover{
+        transform: scale(1.2)translateY(-10px);
+        color: orangered;
+        border: 2px solid  orangered;
+}
+.footer ul{
+        margin-top: 0;
+        padding: 0;
+        font-size: 18px;
+         line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+ }
+.footer ul li a{
+        color: white;
+        border-bottom: 3px solid orangered;
+        transition: 0.3s ease;
+}
+.footer ul li{
+        display: inline-block;
+        padding: 0 15px;
+
+}
+.footer .copyright{
+        margin-top: 15px;
+        text-align: center;
+        font-size: 12px;
+        color: white;
+}
+         
+                              
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>pay</span>al</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Portfoliyo</a>
+            <a href="#">Services</a>
+            <a href="#">Experience</a>
+            <a href="#">Education</a>
+        </nav>
+       
+        <a href="#" class="Contact"><button class="contact_btn">Contact Me</button></a>                                                  
+    </header>
+
+    <section class="home">
+        <div class="home-conten">
+            <h3>Hello</h3>
+
+            <h1>I'm <span>Payal jat<br></span>a Fronted Developer</h1>
+
+            <br><p>Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Ab nemo
+            quos deserunt, asperiores possiums
+            quaerat omnis cum atque veniam et est. Ea
+            tempore illum vel exercitionem delectus
+            itaque aspernatur quod</p>
+
+         <br><br>  <div class="btn-box">
+                <button class="btn-1">Hire Me</button>
+                <button class="btn-2">Experience</button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="payal.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="about">
+
+        <div class="about-img">
+            <img src="payal.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Fronted <span>Devloper</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed omnis aspernatur praesentium! Nulla architecto quaerat eius molestias illum, quibusdam totam animi eligendi, itaque accusamus error perspiciatis beatae harum officia.</p>
+             <a href="#" class="btn-2">Experience</a>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <div class="form">
+        <h2 class=>Contect <span>Me</span></h2>
+        <form action="#home">
+            <input type="text" name="name" placeholder="Enter Your Name" required=""><br>
+            <input type="email" name="email" placeholder="Enter Your Name" required=""><br>
+            <input type="number" name="mno" placeholder="Enter Your Phone No." required=""><br>
+            <textarea name="msg" id="msg" rows="6" cols="20" placeholder="Enter Your Message"></textarea><br>
+            <button class="form_btn">Submit</button>              
+        </form>
+        </div> 
+    </section>
+
+    <footer class="footer">
+
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+
+    
+    </footer>
+</body>
+</html>
